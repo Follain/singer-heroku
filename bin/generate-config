@@ -1,0 +1,30 @@
+#!/usr/bin/env ruby
+
+require 'bundler'
+Bundler.require
+
+require 'optparse'
+require './lib/generate_config'
+
+config = nil
+
+parser = OptionParser.new do |opts|
+  opts.banner = "Usage: #{$0} [options]"
+  opts.on('-k', '--key key', 'Config key prefix') do |key|
+    config = GenerateConfig.new(ENV.to_h.dup, key)
+  end
+
+  opts.on_tail('-h', '--help', 'Displays help') do
+    puts opts
+    exit
+  end
+end
+
+parser.parse!
+
+unless config
+  puts parser
+  exit 1
+end
+
+puts config.to_json
