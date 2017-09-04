@@ -18,5 +18,8 @@ Gem::Specification.new do |s|
 
   s.files        = Dir['{lib}/**/*.rb', 'bin/*', 'LICENSE', '*.md']
   s.require_path = 'lib'
-  s.executables  = ['singer-heroku']
+  s.executables  = %w[generate-config read-state write-state]
+  s.add_runtime_dependency 'pg'
+  s.add_runtime_dependency 'rake'
+  s.add_runtime_dependency 'sequel', '~>4.49.0'
 end

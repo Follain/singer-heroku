@@ -1,0 +1,39 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'bundler'
+Bundler.require
+
+require 'optparse'
+require './lib/database'
+require './lib/read_state'
+require 'dotenv/load'
+require 'logger'
+
+read_state = nil
+database = Database.new(ENV.fetch('DATABASE_URL'))
+
+parser = OptionParser.new do |opts|
+  opts.banner = "Usage: #{$PROGRAM_NAME} [options]"
+  opts.on('-k', '--key key', 'Config key prefix') do |key|
+    read_state = ReadState.new(key, database)
+  end
+
+  opts.on_tail('-v', '--verbose', 'Enable verbose logging') do
+    database.logger = Logger.new($stderr)
+  end
+
+  opts.on_tail('-h', '--help', 'Displays help') do
+    puts opts
+    exit
+  end
+end
+
+parser.parse!
+
+unless read_state
+  puts parser
+  exit 1
+end
+
+puts JSON.generate(read_state.perform)

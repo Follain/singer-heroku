@@ -2,6 +2,9 @@ PATH
   remote: .
   specs:
     singer-heroku (0.0.1)
+      pg
+      rake
+      sequel (~> 4.49.0)
 
 GEM
   remote: https://rubygems.org/
@@ -52,6 +55,7 @@ GEM
     parallel (1.12.0)
     parser (2.4.0.0)
       ast (~> 2.2)
+    pg (0.21.0)
     powerpack (0.1.1)
     pronto (0.9.5)
       gitlab (~> 4.0, >= 4.0.0)
@@ -99,6 +103,7 @@ GEM
     sawyer (0.8.1)
       addressable (>= 2.3.5, < 2.6)
       faraday (~> 0.8, < 1.0)
+    sequel (4.49.0)
     shellany (0.0.1)
     slop (3.6.0)
     terminal-table (1.8.0)

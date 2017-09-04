@@ -16,8 +16,31 @@ singer-heroku
 
   Given the following ENV:
 
-    VEND_CONFIG_first_name=joe
-    VEND_CONFIG_last_name=lind
+    TEST_CONFIG_first_name=joe
+    TEST_CONFIG_last_name=lind
 
-    generate-config -k VEND
+    generate-config -k TEST
     {"first_name":"joe","last_name":"lind"}
+
+## read-state
+
+  Reads JSON `data` from `singer_states` table in `DATABASE_URL` where key is
+  `#{KEY}`, passed in args.
+
+    > read-state -kTEST
+    {"high_water_mark":4}
+
+
+## write-state
+
+  Reads jsonl from stdin and writes to database specified in DATABASE_URL
+
+    > cat states.json
+    { "high_water_mark": 1 }
+    { "high_water_mark": 2 }
+    { "high_water_mark": 3 }
+    { "high_water_mark": 4 }
+
+    > cat states.json | write-state -kTEST
+    > read-state -kTEST
+    {"high_water_mark":4}
