@@ -5,8 +5,8 @@ require 'bundler'
 Bundler.require
 
 require 'optparse'
-require './lib/database'
-require './lib/read_state'
+require_relative '../lib/database'
+require_relative '../lib/read_state'
 require 'dotenv/load'
 require 'logger'
 

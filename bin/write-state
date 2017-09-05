@@ -6,8 +6,8 @@ Bundler.require
 
 require 'optparse'
 require 'logger'
-require './lib/database'
-require './lib/write_state'
+require_relative '../lib/database'
+require_relative '../lib/write_state'
 require 'dotenv/load'
 
 write_state = nil
