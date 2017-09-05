@@ -19,6 +19,8 @@ RSpec.describe GenerateConfig do
         {
           'VEND_CONFIG_username' => 'user',
           'VEND_CONFIG_password' => 'password',
+          'VEND_CONFIG_integer' => '1',
+          'VEND_CONFIG_float' => '1.01',
           'VEND_OTHER' => 'other',
           'OTHER_CONFIG_USERNAME' => 'other_user'
         }
@@ -34,7 +36,9 @@ RSpec.describe GenerateConfig do
 
         expect(hash).to eq(
           'password' => 'password',
-          'username' => 'user'
+          'username' => 'user',
+          'integer' => 1,
+          'float' => 1.01
         )
       end
     end

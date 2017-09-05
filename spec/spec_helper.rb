@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative '../lib/database'
+
 RSpec.shared_context 'Global Helpers' do
   let(:database) do
     Database.new(ENV.fetch('DATABASE_URL'))
@@ -19,6 +21,7 @@ RSpec.configure do |config|
 
   config.before(:suite) do
     require 'dotenv'
+    require 'sequel'
     Dotenv.load '.env.test'
 
     Sequel.extension :migration

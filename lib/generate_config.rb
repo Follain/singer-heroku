@@ -16,9 +16,18 @@ GenerateConfig = Struct.new(:env, :key) do
       env.keys.grep(key_pattern).map do |key|
         [
           key.match(key_pattern)[1],
-          env[key]
+          cast_if_needed(env[key])
         ]
       end
     ]
+  end
+
+  private
+
+  def cast_if_needed(value)
+    return value.to_i if value.to_i.to_s == value
+    return value.to_f if value.to_f.to_s == value
+
+    value
   end
 end
