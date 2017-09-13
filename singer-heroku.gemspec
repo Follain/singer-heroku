@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
   s.files        = Dir['{lib}/**/*.rb', 'bin/*', 'LICENSE', '*.md']
   s.require_path = 'lib'
   s.executables  = %w[generate-config read-state write-state]
-  s.add_runtime_dependency 'pg'
-  s.add_runtime_dependency 'rake'
-  s.add_runtime_dependency 'sequel', '~>4.49.0'
+  s.add_runtime_dependency 'pg', '~> 0.21'
+  s.add_runtime_dependency 'rake', '~> 12'
+  s.add_runtime_dependency 'sequel', '~>4.49'
 end
