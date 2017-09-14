@@ -9,6 +9,15 @@ singer-heroku
     gem install singer-heroku
 
 
+## Create this table in `DATABASE_URL` database
+
+    CREATE TABLE singer_states
+      (
+        key text NOT NULL,
+        data jsonb,
+        CONSTRAINT singer_states_pkey PRIMARY KEY (key)
+      )
+
 ## generate-config
 
   Reads from `#{KEY}_CONFIG_*` environment variables and generates json to
