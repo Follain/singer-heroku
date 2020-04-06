@@ -1,0 +1,373 @@
+
+{
+  "streams": [
+    {
+      "tap_stream_id": "customers",
+      "key_properties": [
+        "email"
+      ],
+      "schema": {
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "total_spend_cents": {
+            "type": "integer"
+          },
+          "total_purchases": {
+            "type": "integer"
+          },
+          "perks_redeemed": {
+            "type": "integer"
+          },
+          "last_purchase_at": {
+            "format": "date-time",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "points_earned": {
+            "type": "integer"
+          },
+          "points_balance": {
+            "type": "integer"
+          },
+          "points_expire_at": {
+            "format": "date-time",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "first_name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "last_name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "last_seen_at": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "third_party_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "pos_account_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "has_store_account": {
+            "type": "boolean"
+          },
+          "birthday_month": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "birth_day": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "birthday_year": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "vip_tier_name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "vip_tier_entry_date": {
+            "format": "date-time",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "vip_tier_expiration": {
+            "format": "date-time",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "vip_tier_maintenance_requirements": {
+            "properties": {
+              "points_needed": {
+                "type": "integer"
+              },
+              "amount_cents_needed": {
+                "type": "integer"
+              },
+              "purchases_needed": {
+                "type": "integer"
+              },
+              "referrals_needed": {
+                "type": "integer"
+              }
+            },
+            "type": [
+              "object",
+              "null"
+            ]
+          },
+          "vip_tier_upgrade_requirements": {
+            "properties": {
+              "points_needed": {
+                "type": "integer"
+              },
+              "amount_cents_needed": {
+                "type": "integer"
+              },
+              "purchases_needed": {
+                "type": "integer"
+              },
+              "referrals_needed": {
+                "type": "integer"
+              }
+            },
+            "type": [
+              "object",
+              "null"
+            ]
+          }
+        },
+        "type": [
+          "object"
+        ]
+      },
+      "stream": "customers",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "selected": true ,
+            "table-key-properties": [
+              "email"
+            ],
+            "valid-replication-keys": [
+              "last_seen_at"
+            ],
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "email"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "total_spend_cents"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "total_purchases"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "perks_redeemed"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "last_purchase_at"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "points_earned"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "points_balance"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "points_expire_at"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "first_name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "last_name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "last_seen_at"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "third_party_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "pos_account_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "has_store_account"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "birthday_month"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "birth_day"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "birthday_year"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "vip_tier_name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "vip_tier_entry_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "vip_tier_expiration"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "vip_tier_maintenance_requirements"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "vip_tier_upgrade_requirements"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        }
+      ]
+    }
+  ]
+}

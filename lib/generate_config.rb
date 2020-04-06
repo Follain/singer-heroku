@@ -24,9 +24,19 @@ GenerateConfig = Struct.new(:env, :key) do
 
   private
 
+  def valid_json?(json)
+    begin
+      JSON.parse(json)
+      return true
+    rescue Exception => e
+      return false
+    end
+  end
+
   def cast_if_needed(value)
     return value.to_i if value.to_i.to_s == value
     return value.to_f if value.to_f.to_s == value
+    return JSON.parse(value) if  valid_json?(value)
 
     value
   end
