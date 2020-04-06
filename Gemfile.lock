@@ -2,9 +2,9 @@ PATH
   remote: .
   specs:
     singer-heroku (0.0.1)
-      pg
-      rake
-      sequel (~> 4.49.0)
+      pg (~> 0.21)
+      rake (>= 12, < 14)
+      sequel (~> 4.49)
 
 GEM
   remote: https://rubygems.org/
@@ -74,7 +74,7 @@ GEM
     public_suffix (3.0.0)
     rainbow (2.2.2)
       rake
-    rake (12.0.0)
+    rake (13.0.1)
     rb-fsevent (0.10.2)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
