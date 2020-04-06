@@ -2,6 +2,8 @@ PATH
   remote: .
   specs:
     singer-heroku (0.0.1)
+      pg
+      rake
       sequel (~> 5.31.0)
 
 GEM
@@ -59,6 +61,7 @@ GEM
     parallel (1.19.1)
     parser (2.7.1.0)
       ast (~> 2.4.0)
+    pg (0.21.0)
     pronto (0.10.0)
       gitlab (~> 4.0, >= 4.0.0)
       httparty (>= 0.13.7)
@@ -74,6 +77,7 @@ GEM
       method_source (~> 1.0)
     public_suffix (4.0.4)
     rainbow (3.0.0)
+    rake (13.0.1)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
