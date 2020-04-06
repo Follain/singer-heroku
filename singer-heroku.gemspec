@@ -21,5 +21,5 @@ Gem::Specification.new do |s|
   s.executables  = %w[generate-config read-state write-state]
   s.add_runtime_dependency 'pg', '~> 0.21'
   s.add_runtime_dependency 'rake', '~> 12'
-  s.add_runtime_dependency 'sequel', '~>4.49'
+  s.add_runtime_dependency 'sequel','~>5.31.0'
 end
