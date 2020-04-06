@@ -2,9 +2,9 @@ PATH
   remote: .
   specs:
     singer-heroku (0.0.1)
-      pg
-      rake
-      sequel (~> 4.49.0)
+      pg (~> 0.21)
+      rake (~> 12)
+      sequel (~> 4.49)
 
 GEM
   remote: https://rubygems.org/
@@ -18,7 +18,7 @@ GEM
     dotenv (2.2.0)
     faraday (0.13.1)
       multipart-post (>= 1.2, < 3)
-    ffi (1.9.18)
+    ffi (1.12.2)
     formatador (0.2.5)
     gitlab (4.2.0)
       httparty
